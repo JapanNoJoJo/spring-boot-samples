@@ -1,0 +1,25 @@
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/elegant_api
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      username: postgres
+      password: 123456
+      connection-timeout: 30000
+      read-only: off
+      minimum-idle: 2
+      maximum-pool-size: 10
+      auto-commit: on
+      max-lifetime: 600000
+      idle-timeout: 300000
+      connection-test-query: select 1
+      validation-timeout: 1500
+      schema: public
+  jpa:
+    open-in-view: off
+    hibernate:
+      ddl-auto: update
+    show-sql: on
